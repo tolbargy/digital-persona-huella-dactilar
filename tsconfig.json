@@ -1,23 +1,41 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "out/public",
+    "lib": ["dom", "es2015", "es2015.promise" ],
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "typeRoots": [
+      "node_modules/@types",
+      "./@types"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": [ "@types/*" ]
+    },
+
+    "esModuleInterop": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
-  }
+  "include": [
+    "src",
+    "@types",
+    "server",
+  ],
+  "exclude": [
+    "node_modules",
+    "public"
+  ]
 }
